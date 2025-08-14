@@ -1,6 +1,6 @@
 function About(){
     return (
-        <div className="min-h-screen bg-blue-100 bg-cover bg-center grid grid-cols-2">
+        <div className="min-h-screen bg-blue-100 bg-cover bg-center grid grid-cols-2" id="about">
 
             <div>
                 hello

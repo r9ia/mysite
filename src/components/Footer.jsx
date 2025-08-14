@@ -2,7 +2,7 @@
 function Footer(){
 
     return(
-        <div className="text-center">
+        <div className="text-center z-10">
             hello!! yay
 
 
