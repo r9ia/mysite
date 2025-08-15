@@ -1,7 +1,7 @@
 function Works(){
     return (
-        <div className="min-h-screen bg-blue-400 bg-cover bg-center" id="works">
-            <h1>Projects</h1>
+        <div className="min-h-screen bg-orange-200 bg-cover bg-center pt-24" id="works">
+            <h1 className="text-7xl text-center font-bold ">Projects</h1>
 
             <div>
                 

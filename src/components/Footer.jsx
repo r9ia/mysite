@@ -2,7 +2,7 @@
 function Footer(){
 
     return(
-        <div className="text-center z-10">
+        <div className="bg-red-100 text-center z-10">
             hello!! yay
 
 
