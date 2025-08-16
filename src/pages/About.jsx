@@ -19,11 +19,7 @@ function About() {
         </div>
       </div>
 
-      <div>
-        OOH OOH I KNOW PYTHON
-      </div>
-
-
+      <div>OOH OOH I KNOW PYTHON</div>
     </div>
   );
 }

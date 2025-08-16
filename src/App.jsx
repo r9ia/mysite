@@ -23,7 +23,6 @@ function App() {
     <About/>
     <Works/>
     <Contact/>
-    <Footer/>
    
 
     </div>
