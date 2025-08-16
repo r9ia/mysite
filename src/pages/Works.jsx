@@ -1,3 +1,5 @@
+import Project from "../components/Project.jsx";
+
 function Works() {
   return (
     <div
@@ -6,7 +8,10 @@ function Works() {
     >
       <h1 className="text-7xl text-center font-bold ">Projects</h1>
 
-      <div></div>
+      <div className="grid grid-cols-3">
+        
+
+      </div>
     </div>
   );
 }
