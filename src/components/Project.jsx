@@ -1,24 +1,27 @@
+function Project({ Image, Title, Description, Link }) {
+  return (
+    <div class="p-8 backdrop-blur-m shadow-sm rounded-3xl">
+      <img
+        src={Image}
+        alt="image of project"
+        class="object-contain h-48 m-auto"
+      ></img>
 
-function Project(props){
-    return <div>
-        <img src={props.Image} alt="image of project"></img>
+      <h1 class="text-3xl font-semibold pt-4">{Title}</h1>
 
-        <h1> 
-            {props.Title}
-        </h1>
+      <p>{Description}</p>
+      <br />
 
-        <p>
-            {props.Description}
-        </p>
-
-        <Button>
-            {props.Link}
-        </Button>
-        
-        
-        
-        
+      {Link && (
+        <button
+          onClick={() => window.open(Link, "_blank","noopener,noreferrer")}
+          className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-xl px-4 py-1 rounded-2xl text-m"
+        >
+          See More
+        </button>
+      )}
     </div>
+  );
 }
 
-export default Project
+export default Project;

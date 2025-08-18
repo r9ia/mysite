@@ -1,24 +1,31 @@
+function Landing() {
+  return (
+    <div
+      className=" min-h-screen bg-[url('/aquariumbg.jpg')] 
+        bg-cover bg-center pt-50 opacity-90"
+    >
+      <div class="w-[70%] m-auto">
+        <h1 className="text-9xl text-white font-bold">
+          Welcome!
+          <img
+            src="/shark.gif"
+            alt="shark gif"
+            className="h-[1em] w-auto inline-block mr-2"
+          />
+        </h1>
+        <h2 class="text-5xl text-white font-bold">I'm Georgia Wu</h2>
 
+        <p className="text-3xl text-white font-semibold">
+          sdfsdgsdgsdgsdgsdgsdgAHHHH
+        </p>
 
-function Landing(){
-    return ( 
-        <div className="pl-40 min-h-screen bg-[url('./assets/aquariumbg.jpg')] 
-        bg-cover bg-center pt-50 opacity-90">
-            <h1 className="text-9xl text-white font-bold">
-                I'm Georgia!
-                <img src="/shark.gif" alt="shark gif" className="h-[1em] w-auto inline-block mr-2"/>
-            </h1>
-
-            <p className="text-5xl text-white font-semibold">sdfsdgsdgsdgsdgsdgsdgAHHHH</p>
-            
-            <br/>
-            
-            
-        </div>
-    );
+        <br />
+      </div>
+    </div>
+  );
 }
 
-export default Landing
+export default Landing;
 
 /*<ul className="list-none flex gap-6 ">
                 <li className="w-16 h-16 hover:fill-yellow-100 hover:transition-colors duration-400">
