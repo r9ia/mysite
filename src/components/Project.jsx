@@ -1,6 +1,6 @@
 function Project({ Image, Title, Description, Link }) {
   return (
-    <div class="p-8 backdrop-blur-m shadow-sm rounded-3xl">
+    <div class="p-8 backdrop-blur-m shadow-sm rounded-3xl w-96">
       <img
         src={Image}
         alt="image of project"

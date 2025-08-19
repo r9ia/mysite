@@ -17,12 +17,12 @@ function About() {
       id="about"
     >
       <div className="flex flex-wrap justify-evenly item-center">
-        <div className="w-[50%] min-w-144 p-4">
+        <div className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] p-4">
           <img src="/camerapic1.PNG" alt="pic of me" className=""></img>
           <p>TDSsAA Girl's Singles HS City Championships - Gold! </p>
         </div>
 
-        <div className="w-[50%] min-w-144 p-4"> 
+        <div className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] p-4"> 
           <h1 className="text-black text-7xl text-center font-bold gap-8">
             About Me
           </h1>

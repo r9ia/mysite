@@ -11,34 +11,30 @@ import ContactTab from '../components/ContactTab.jsx'
 function Contact() {
   return (
     <div
-      className="flex justify-center items-center h-screen bg-green-100 bg-cover bg-center p-8"
+      className="flex justify-center items-center min-h-screen bg-green-100 bg-cover bg-center p-8"
       id="contact"
     >
-      <div className="bg-green-200 p-4 rounded-4xl w-9/10 h-8/10 grid grid-cols-2">
-        <div className=" text-black text-center p-12">
-          <h1 className="text-7xl  font-bold">
+      <div className="flex bg-green-200 p-4 rounded-4xl w-9/10 h-8/10 flex-wrap justify-evenly">
+        <div className=" text-black text-center p-12 w-full sm:w-[80%] md:w-[60%] lg:w-[50%]">
+          <h1 className="text-7xl font-bold">
             My Contacts
           </h1> 
           <p>Feel free to contact me anytime </p>
         </div>
 
-        <div className=" p-6 rounded-lg flex items-center bg-[rgba(255,255,255,0.15)] 
+        <div className=" p-6 rounded-lg items-center bg-[rgba(255,255,255,0.15)] 
          backdrop-blur-4 
          rounded-4xl
          border border-[rgba(255,255,255,0.3)] 
-         relative overflow-hidden">
-
-          <div>
+         relative overflow-hidden
+         w-full sm:w-[80%] md:w-[60%] lg:w-[50%]">
+          
             <ContactTab Logo={Linkedin} Social="Linkedin" Handle="www.linkedin.com/in/georgia-wu"/>
             <ContactTab Logo={Github} Social="Github" Handle="https://github.com/r9ia"/>
             <ContactTab Logo={Devpost} Social="Devpost" Handle="https://devpost.com/_rgia"/>
             <ContactTab Logo={Instagram} Social="Instagram" Handle="@georgia.wmj"/>
             <ContactTab Logo={Email} Social="Email" Handle="georgiamwu@gmail.com"/>
 
-          </div>
-       
-            
-       
         </div>
       </div>
     </div>
