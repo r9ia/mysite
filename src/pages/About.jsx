@@ -13,17 +13,17 @@ import Gamemaker from "/gamemaker.png";
 function About() {
   return (
     <div
-      className="min-h-screen bg-blue-100 bg-cover bg-center justify-between pt-32 p-8"
+      className="min-h-screen bg-blue-100 bg-cover bg-center pt-32 p-8"
       id="about"
     >
-      <div className="grid grid-cols-2">
-        <div>
-          <img src="/camerapic1.PNG" alt="pic of me" className="pl-20"></img>
+      <div className="flex flex-wrap justify-evenly item-center">
+        <div className="w-[50%] min-w-144 p-4">
+          <img src="/camerapic1.PNG" alt="pic of me" className=""></img>
           <p>TDSsAA Girl's Singles HS City Championships - Gold! </p>
         </div>
 
-        <div>
-          <h1 className="text-black text-7xl text-center font-bold">
+        <div className="w-[50%] min-w-144 p-4"> 
+          <h1 className="text-black text-7xl text-center font-bold gap-8">
             About Me
           </h1>
           <p className="text-2xl p-8">
@@ -39,6 +39,7 @@ function About() {
             ^_^.
           </p>
         </div>
+
       </div>
 
       <h1 className="text-4xl font-bold text-center mt-24 mb-16">What I've Worked With</h1>
