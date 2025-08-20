@@ -15,7 +15,7 @@ function Navbar() {
   };
 
   return (
-    
+
     <div
       className=" fixed z-10 min-w-screen
     transition-all ease-in-out duration-300 bg-[linear-gradient(0deg,rgba(255,255,255,0)_0%,rgb(0,0,0)_125%)]"
@@ -33,8 +33,8 @@ function Navbar() {
         <div className="flex gap-4">
 
           <NavLink Name="Linkedin" Link="https://www.linkedin.com/in/georgia-wu/" Source="/linkedin.svg"/>
-          <NavLink Name="Github" Link="https://devpost.com/_rgia" Source="/github.svg"/>
-          <NavLink Name="Devpost" Link="https://www.linkedin.com/in/georgia-wu/" Source="/devpost.svg"/>
+          <NavLink Name="Github" Link="https://github.com/r9ia" Source="/github.svg"/>
+          <NavLink Name="Devpost" Link="https://devpost.com/_rgia" Source="/devpost.svg"/>
           <NavLink Name="Instagram" Link="https://www.instagram.com/georgia.wmj/" Source="/insta.svg"/>
           <NavLink Name="Mail" Link="mailto:georgiamwu@gmail.com" Source="/mail.svg"/>
           
