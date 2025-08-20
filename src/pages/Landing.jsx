@@ -3,6 +3,7 @@ function Landing() {
     <div
       className=" min-h-screen bg-[url('/aquariumbg.jpg')] 
         bg-cover bg-center pt-50 opacity-90"
+        id="landing"
     >
       <div class="w-[70%] m-auto">
         <h1 className="text-9xl text-white font-bold">
