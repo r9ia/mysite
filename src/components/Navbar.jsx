@@ -24,7 +24,7 @@ function Navbar() {
     //defining function that updates mobile
     {
       const handleResize = () => {
-        setMobile(window.innerWidth < 728);
+        setMobile(window.innerWidth < 1200);
       };
       handleResize(); //running function
 
@@ -62,8 +62,21 @@ function Navbar() {
         </div>
 
         { menu && (
-          <div className="bg-black min-w-screen min-h-screen">
-            AHHH
+          <div className="fixed inset-0 backdrop-blur-[10px] bg-white/6 min-w-screen min-h-screen">
+            <div className="flex flex-col items-center pt-24 gap-8">
+              <NavButton Text="About" Id="about" onClick={toggleMenu}/>
+              <NavButton Text="Projects" Id="works" onClick={toggleMenu}/>
+              <NavButton Text="Contacts" Id="contact" onClick={toggleMenu}/>
+            </div>
+            <div className="flex justify-center gap-8 pt-16">
+              <NavLink Name="Linkedin" Link="https://www.linkedin.com/in/georgia-wu/" Source="/linkedin.svg"/>
+              <NavLink Name="Github" Link="https://github.com/r9ia" Source="/github.svg"/>
+              <NavLink Name="Devpost" Link="https://devpost.com/_rgia" Source="/devpost.svg"/>
+              <NavLink Name="Instagram" Link="https://www.instagram.com/georgia.wmj/" Source="/insta.svg"/>
+              <NavLink Name="Mail" Link="mailto:georgiamwu@gmail.com" Source="/mail.svg"/>
+            </div>
+          
+            
 
           </div>
 
