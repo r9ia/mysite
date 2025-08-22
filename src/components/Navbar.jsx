@@ -35,6 +35,15 @@ function Navbar() {
       return () => window.removeEventListener("resize", handleResize);
     }, []);
 
+    //mobile menu check if open/close
+    const [menu, setMenu] = useState(false);
+    //setting the menu to open/close (true/false)
+
+
+    function toggleMenu(){
+      setMenu(prev => !prev); //setMenu is opposite of what it was b4
+    }
+
 
   return (
 
@@ -45,7 +54,21 @@ function Navbar() {
     >
 
       {mobile ? (
-        <h1>hey</h1>
+        <>
+        <div className="w-[90%] m-auto flex justify-between p-4 text-xl">
+          <NavButton Text="Logo" Id="landing" />
+          <button className="bg-orange-400 rounded-xl text-2xl z-12"
+          onClick={toggleMenu}> ☰ </button>
+        </div>
+
+        { menu && (
+          <div className="bg-black min-w-screen min-h-screen">
+            AHHH
+
+          </div>
+
+        )}
+        </>
 
       ):(
 
