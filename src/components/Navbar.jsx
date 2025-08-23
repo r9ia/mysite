@@ -1,7 +1,5 @@
-import {useState, useEffect, useRef} from "react";
+import { useState, useEffect, useRef } from "react";
 
-import NavButton from "./NavButton";
-import NavLink from "./NavLink";
 import NavbarM from "./NavbarM";
 import NavbarC from "./NavbarC";
 
@@ -33,7 +31,6 @@ function Navbar() {
   //checks if the screen is mobile, sets mobile to true if it is
   const [mobile, setMobile] = useState(window.innerWidth < 1200);
 
-
   useEffect(() =>
     //defining function that updates mobile
     {
@@ -49,7 +46,6 @@ function Navbar() {
       return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-
   return (
     <div
       className=" fixed z-10 min-w-screen text-white
@@ -57,20 +53,9 @@ function Navbar() {
       id="navbar"
       ref={navbarRef}
     >
-
-      {mobile ? (
-        <NavbarM/>
-
-      ):(
-
-      <NavbarC/>
-        
-      )}
-      
-
+      {mobile ? <NavbarM /> : <NavbarC />}
     </div>
   );
 }
 
 export default Navbar;
-
