@@ -11,7 +11,7 @@ import ContactTab from '../components/ContactTab.jsx'
 function Contact() {
   return (
     <div
-      className="flex justify-center items-center min-h-screen bg-green-100 bg-cover bg-center p-8"
+      className="flex justify-center items-center min-h-screen bg-[url('/XPwallpaper.jpeg')] bg-cover bg-center p-8"
       id="contact"
     >
       <div className="flex bg-green-200 p-4 rounded-4xl w-9/10 h-8/10 flex-wrap justify-evenly">

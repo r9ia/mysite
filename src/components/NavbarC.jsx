@@ -1,3 +1,5 @@
+import NavButton from "./NavButton";
+import NavLink from "./NavLink";
 
 function NavbarC(){
     return <div class="w-[80%] flex p-4 text-2xl m-auto justify-between pt-8"> 

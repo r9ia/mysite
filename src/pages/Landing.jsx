@@ -1,11 +1,11 @@
 function Landing() {
   return (
     <div
-      className=" min-h-screen bg-[url('/aquariumbg.jpg')] 
+      className=" min-h-screen bg-[url('/XPwallpaper.jpeg')] 
         bg-cover bg-center pt-50 opacity-90"
-        id="landing"
+      id="landing"
     >
-      <div class="w-[70%] m-auto ">
+      <div className="w-[70%] m-auto ">
         <h1 className=" text-7xl md:text-8xl lg:text-9xl text-white font-bold ">
           Welcome!
           <img
@@ -14,11 +14,13 @@ function Landing() {
             className="h-[1em] w-auto inline-block mr-2"
           />
         </h1>
-        <h2 class="text-3xl md:text-4xl lg:text-5xl text-white font-bold">I'm Georgia Wu</h2>
+        <h2 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold">
+          I'm Georgia Wu
+        </h2>
 
         <p className="text-2xl md:text-3xl lg:text-4xl text-white font-semibold">
           sdfsdgsdg sdgsdgsdgsd gAHHHH
-        </p> 
+        </p>
 
         <br />
       </div>

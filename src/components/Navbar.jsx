@@ -1,23 +1,37 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useRef} from "react";
 
 import NavButton from "./NavButton";
 import NavLink from "./NavLink";
+import NavbarM from "./NavbarM";
+import NavbarC from "./NavbarC";
 
 function Navbar() {
   //scroll to hide header
-  let prevScrollPos = window.pageYOffset;
-  window.onscroll = function () {
-    let currentScrollPos = window.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      document.getElementById("navbar").style.top = "0";
-    } else {
-      document.getElementById("navbar").style.top = "-40vh";
-    }
-    prevScrollPos = currentScrollPos;
-  };
+  const navbarRef = useRef(null);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (navbarRef.current) {
+        if (prevScrollPos > currentScrollPos) {
+          navbarRef.current.style.top = "0";
+        } else {
+          navbarRef.current.style.top = "-40vh";
+        }
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
 
   //checks if the screen is mobile, sets mobile to true if it is
-  const [mobile, setMobile] = useState(window.innerWidth < 728);
+  const [mobile, setMobile] = useState(window.innerWidth < 1200);
 
 
   useEffect(() =>
@@ -35,77 +49,24 @@ function Navbar() {
       return () => window.removeEventListener("resize", handleResize);
     }, []);
 
-    //mobile menu check if open/close
-    const [menu, setMenu] = useState(false);
-    //setting the menu to open/close (true/false)
-
-
-    function toggleMenu(){
-      setMenu(prev => !prev); //setMenu is opposite of what it was b4
-    }
-
 
   return (
-
     <div
       className=" fixed z-10 min-w-screen text-white
     transition-all ease-in-out duration-300 bg-[linear-gradient(0deg,rgba(255,255,255,0)_0%,rgb(0,0,0)_125%)]"
       id="navbar"
+      ref={navbarRef}
     >
 
       {mobile ? (
-        <>
-        <div className="w-[90%] m-auto flex justify-between p-4 text-xl">
-          <NavButton Text="Logo" Id="landing" />
-          <button className="bg-orange-400 rounded-xl text-2xl z-12"
-          onClick={toggleMenu}> ☰ </button>
-        </div>
-
-        { menu && (
-          <div className="fixed inset-0 backdrop-blur-[10px] bg-white/6 min-w-screen min-h-screen">
-            <div className="flex flex-col items-center pt-24 gap-8">
-              <NavButton Text="About" Id="about" onClick={toggleMenu}/>
-              <NavButton Text="Projects" Id="works" onClick={toggleMenu}/>
-              <NavButton Text="Contacts" Id="contact" onClick={toggleMenu}/>
-            </div>
-            <div className="flex justify-center gap-8 pt-16">
-              <NavLink Name="Linkedin" Link="https://www.linkedin.com/in/georgia-wu/" Source="/linkedin.svg"/>
-              <NavLink Name="Github" Link="https://github.com/r9ia" Source="/github.svg"/>
-              <NavLink Name="Devpost" Link="https://devpost.com/_rgia" Source="/devpost.svg"/>
-              <NavLink Name="Instagram" Link="https://www.instagram.com/georgia.wmj/" Source="/insta.svg"/>
-              <NavLink Name="Mail" Link="mailto:georgiamwu@gmail.com" Source="/mail.svg"/>
-            </div>
-          
-            
-
-          </div>
-
-        )}
-        </>
+        <NavbarM/>
 
       ):(
 
-      <div className="w-[80%] items-center flex p-4 text-2xl m-auto justify-between pt-8"> 
-        <div className="gap-6 flex ">
-          <NavButton Text="Logo" Id="landing" />
-          <NavButton Text="About" Id="about" />
-          <NavButton Text="Projects" Id="works" />
-          <NavButton Text="Contacts" Id="contact" />
-        </div>
-
-        <div className="flex gap-4">
-
-          <NavLink Name="Linkedin" Link="https://www.linkedin.com/in/georgia-wu/" Source="/linkedin.svg"/>
-          <NavLink Name="Github" Link="https://github.com/r9ia" Source="/github.svg"/>
-          <NavLink Name="Devpost" Link="https://devpost.com/_rgia" Source="/devpost.svg"/>
-          <NavLink Name="Instagram" Link="https://www.instagram.com/georgia.wmj/" Source="/insta.svg"/>
-          <NavLink Name="Mail" Link="mailto:georgiamwu@gmail.com" Source="/mail.svg"/>
-          
-        </div>
-      </div>
+      <NavbarC/>
         
-      )
-      }
+      )}
+      
 
     </div>
   );
@@ -113,16 +74,3 @@ function Navbar() {
 
 export default Navbar;
 
-/*<Link to="/">Home</Link>
-      <Link to="/about">About</Link>
-      <Link to="/projects">Projects</Link>
-      <Link to="/contact">Contact Me</Link> 
-      
-      let prevScrollPos = windows.pageYOffset;
-      window.onscroll= function(){
-    let currentScrollPos = windows.pageYOffset;
-    if (prevScrollPos > currentScrollPos) {
-      document.getElementById('navbar')
-    }
-
-  }*/
