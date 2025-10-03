@@ -12,9 +12,18 @@ function NavbarM(){
     }
     
     return <>
-    <div className="w-[90%] m-auto flex justify-between p-4 text-xl">
-          <NavButton Text="Logo" Id="landing" />
-          <button className="bg-orange-500 rounded-3xl text-2xl z-12 hover:bg-orange-700"
+    <div className=" m-auto flex justify-between pt-8 text-xl items-center">
+      
+          <button
+          className="px-4"
+          onClick={() => {
+            document.getElementById("landing")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          <img src="/fishHome.png" alt="pic of me" className="w-24 h-20 ml-0"></img>
+        </button>
+
+          <button className="bg-orange-500 rounded-3xl text-2xl z-12 hover:bg-orange-700 h-12 mr-4"
           onClick={toggleMenu}> <pre> ☰ </pre></button>
         </div>
 

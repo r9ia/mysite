@@ -11,10 +11,10 @@ import ContactTab from '../components/ContactTab.jsx'
 function Contact() {
   return (
     <div
-      className="flex justify-center items-center min-h-screen bg-[url('/XPwallpaper.jpeg')] bg-cover bg-center p-8"
+      className="flex justify-center items-center min-h-screen bg-[url('/followWindows.jpeg')] bg-cover bg-center p-8 "
       id="contact"
     >
-      <div className="flex bg-green-200 p-4 rounded-4xl w-9/10 h-8/10 flex-wrap justify-evenly">
+      <div className="flex bg-green-200 p-4 rounded-3xl w-9/10 h-8/10 flex-wrap justify-evenly backdrop-blur-[10px] bg-white/6">
         <div className=" text-black text-center p-12 w-full sm:w-[80%] md:w-[60%] lg:w-[50%]">
           <h1 className="text-7xl font-bold">
             My Contacts
@@ -22,7 +22,7 @@ function Contact() {
           <p>Feel free to contact me anytime </p>
         </div>
 
-        <div className=" p-6 rounded-lg items-center bg-[rgba(255,255,255,0.15)] 
+        <div className=" p-6 rounded-xl items-center bg-[rgba(255,255,255,0.15)] 
          backdrop-blur-4 
          rounded-4xl
          border border-[rgba(255,255,255,0.3)] 

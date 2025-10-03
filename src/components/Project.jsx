@@ -15,7 +15,7 @@ function Project({ Image, Title, Description, Link }) {
       {Link && (
         <button
           onClick={() => window.open(Link, "_blank","noopener,noreferrer")}
-          className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-xl px-4 py-1 rounded-2xl text-m"
+          className="bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-xl px-4 py-1 rounded-2xl text-m hover:bg-white/6"
         >
           See More
         </button>

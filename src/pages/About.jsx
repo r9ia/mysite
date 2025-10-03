@@ -13,13 +13,12 @@ import Gamemaker from "/gamemaker.png";
 function About() {
   return (
     <div
-      className="min-h-screen bg-blue-100 bg-cover bg-center pt-32 p-8"
+      className="min-h-screen bg-cover bg-center pt-32 p-8 bg-[#f5f4f2]"
       id="about"
     >
       <div className="flex flex-wrap justify-evenly item-center">
         <div className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] p-4">
-          <img src="/camerapic1.PNG" alt="pic of me" className=""></img>
-          <p>TDSsAA Girl's Singles HS City Championships - Gold! </p>
+          <img src="/badmin.png" alt="pic of me" className=""></img>
         </div>
 
         <div className="w-full sm:w-[80%] md:w-[60%] lg:w-[50%] p-4"> 
@@ -42,7 +41,17 @@ function About() {
 
       </div>
 
-      <h1 className="text-4xl font-bold text-center mt-24 mb-16">What I've Worked With</h1>
+      
+
+      
+    </div>
+  );
+}
+
+export default About;
+
+/*
+<h1 className="text-4xl font-bold text-center mt-12 mb-16">What I've Worked With</h1>
 
       <div className="gap-8 w-[80%] m-auto flex-wrap flex justify-evenly">
         <SkillTab Icon={HTML} Name="HTML" Stars="4"/>
@@ -53,8 +62,5 @@ function About() {
         <SkillTab Icon={Tailwind} Name="Tailwind" Stars="4"/>
         <SkillTab Icon={Gamemaker} Name="Gamemaker" Stars="4"/>
       </div>
-    </div>
-  );
-}
 
-export default About;
+*/
